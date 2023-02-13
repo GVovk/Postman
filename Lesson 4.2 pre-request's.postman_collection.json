@@ -1,0 +1,100 @@
+{
+	"info": {
+		"_postman_id": "084c754f-2400-42b8-a9ea-a427085b7078",
+		"name": "Lesson 4.2 pre-request's",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18837085"
+	},
+	"item": [
+		{
+			"name": "Folder",
+			"item": [
+				{
+					"name": "https://postman-echo.com/post?name=anna Copy",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"console.log(\"Pre req- request\")"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"console.log(\"Tests - request\")"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://postman-echo.com/post?param=anna",
+							"protocol": "https",
+							"host": [
+								"postman-echo",
+								"com"
+							],
+							"path": [
+								"post"
+							],
+							"query": [
+								{
+									"key": "param",
+									"value": "anna"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"console.log(\"Pre req - folder\")"
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"console.log(\"Tests - folder\")"
+						]
+					}
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					"console.log(\"Pre req - collection\")"
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					"console.log(\"Tests - collection\")"
+				]
+			}
+		}
+	]
+}
