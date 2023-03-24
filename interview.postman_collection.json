@@ -1,0 +1,169 @@
+{
+	"info": {
+		"_postman_id": "bdc7b36f-761d-4cb8-90f8-ec5d0fd03cc1",
+		"name": "interview",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18837085"
+	},
+	"item": [
+		{
+			"name": "Request_3.1.",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "candidate",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "P@ssw0rd",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "https://moscom3.comfortsoft.ru/bas/v1/dict-meta/interview",
+					"protocol": "https",
+					"host": [
+						"moscom3",
+						"comfortsoft",
+						"ru"
+					],
+					"path": [
+						"bas",
+						"v1",
+						"dict-meta",
+						"interview"
+					],
+					"query": [
+						{
+							"key": "code",
+							"value": "1007",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Request_3.2.",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "candidate",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "P@ssw0rd",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://moscom3.comfortsoft.ru/bas/v1/dict-data/interview?descendants=false&sort=name%2C-fio&page=0&pageSize=10&filter=confirmStatus%3DNO",
+					"protocol": "https",
+					"host": [
+						"moscom3",
+						"comfortsoft",
+						"ru"
+					],
+					"path": [
+						"bas",
+						"v1",
+						"dict-data",
+						"interview"
+					],
+					"query": [
+						{
+							"key": "descendants",
+							"value": "false"
+						},
+						{
+							"key": "sort",
+							"value": "name%2C-fio"
+						},
+						{
+							"key": "page",
+							"value": "0"
+						},
+						{
+							"key": "pageSize",
+							"value": "10"
+						},
+						{
+							"key": "filter",
+							"value": "confirmStatus%3DNO"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Request_3.3.",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "candidate",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "P@ssw0rd",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"code\": \"1007\",\r\n\"name\": \"QA trainee\",\r\n\"fio\": \"Непомнящая Галина Сергеевна\", \r\n\"bdate\": null, \r\n\"comment\": \"Good luck!\",\r\n\"createTime\": null,\r\n\"updateTime\": null,\r\n\"confirmStatus\": null,\r\n\"startDate\": null,\r\n\"endDate\": null\r\n}\r\n ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://moscom3.comfortsoft.ru/bas/v1/dict-data/interview",
+					"protocol": "https",
+					"host": [
+						"moscom3",
+						"comfortsoft",
+						"ru"
+					],
+					"path": [
+						"bas",
+						"v1",
+						"dict-data",
+						"interview"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
